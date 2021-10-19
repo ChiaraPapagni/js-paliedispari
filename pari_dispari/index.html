@@ -10,7 +10,29 @@
 </head>
 
 <body>
-    <h1 class="message"></h1>
+    <main id="site_main" class="container">
+        <h1>Pari o Dispari</h1>
+
+        <div class="form_wrapper">
+            <div class="form">
+                <label>Inserisci un numero da 1 a 5</label>
+                <input type="number" id="user_number" name="user_number" min="1" max="5">
+            </div>
+            <div class="form">
+                <label>Scegli pari o dispari</label>
+                <select name="even_odd" id="even_odd">
+                    <option value="pari">Pari</option>
+                    <option value="dispari">Dispari</option>
+                </select>
+            </div>
+        </div>
+        <div class="form_wrapper">
+            <button id="play" class="btn">Gioca</button>
+        </div>
+        <p class="message"></p>
+        <h2 class="winner"></h2>
+    </main>
+    <!-- /#site_main -->
 
     <script src="./assets/js/main.js"></script>
 </body>

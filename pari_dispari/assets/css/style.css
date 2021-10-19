@@ -1,16 +1,81 @@
+/* Reset rules */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/********************
+Utility
+********************/
 body {
     font-family: 'Franklin Gothic Medium', 'Arial',
         sans-serif;
     color: royalblue;
+    text-align: center;
 }
 
 h1 {
-    margin-top: 4rem;
-    text-align: center;
+    margin: 4rem;
+}
+
+h2 {
+    margin: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input,
+select,
+button {
+    border: 1px solid royalblue;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+    background-color: royalblue;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    filter: opacity(0.8);
+}
+
+/********************
+Main
+********************/
+.container {
+    width: 90%;
+    margin: 4rem auto;
+}
+
+.form_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #555;
+}
+
+.btn {
+    margin: 2rem;
 }
