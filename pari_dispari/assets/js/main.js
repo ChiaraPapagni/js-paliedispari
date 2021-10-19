@@ -6,7 +6,7 @@ const playButton = document.getElementById('play');
 
 let pcNumber = 0;
 let sum = 0;
-let message;
+let winner;
 
 //al click genera dati numero pc 
 //controlla pari o dispari
@@ -46,11 +46,11 @@ playButton.addEventListener('click', function () {
 
 
         if (isEven(sum) && evenOrOdd.value == 'pari') {
-            message = `Vince l'utente!`;
+            winner = `Vince l'utente!`;
         } else if (!isEven(sum) && evenOrOdd.value == 'dispari') {
-            message = `Vince l'utente!`;
+            winner = `Vince l'utente!`;
         } else {
-            message = `Vince il computer!`;
+            winner = `Vince il computer!`;
         }
 
 
@@ -61,7 +61,7 @@ playButton.addEventListener('click', function () {
 
         document.querySelector('.message').innerHTML =
             `Il computer ha scelto il numero ${pcNumber} - La somma totale è ${sum}`;
-        document.querySelector('.winner').innerHTML = message;
+        document.querySelector('.winner').innerHTML = winner;
 
     }
 
