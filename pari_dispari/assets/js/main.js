@@ -13,6 +13,7 @@ let winner;
 //controlla vincitore
 playButton.addEventListener('click', function () {
 
+    //controllo se il numero inserito è maggiore di 5 o uguale a 0
     if (parseInt(userNumber.value) > 5 || parseInt(userNumber.value) == 0) {
         alert('Devi inserire un numero tra 1 e 5');
         document.querySelector('.message').innerHTML = ` `;
@@ -29,6 +30,7 @@ playButton.addEventListener('click', function () {
         }
 
         pcNumber = generateRandomIntegerForPc();
+
         sum = pcNumber + parseInt(userNumber.value);
 
         /**
@@ -44,7 +46,7 @@ playButton.addEventListener('click', function () {
             return false;
         }
 
-
+        //controllo il vincitore
         if (isEven(sum) && evenOrOdd.value == 'pari') {
             winner = `Vince l'utente!`;
         } else if (!isEven(sum) && evenOrOdd.value == 'dispari') {
@@ -52,12 +54,6 @@ playButton.addEventListener('click', function () {
         } else {
             winner = `Vince il computer!`;
         }
-
-
-        console.log(`L' utente ha scelto: ${evenOrOdd.value}`);
-        console.log('Utente: ' + userNumber.value);
-        console.log('Computer: ' + pcNumber);
-        console.log('Somma totale: ' + sum);
 
         document.querySelector('.message').innerHTML =
             `Il computer ha scelto il numero ${pcNumber} - La somma totale è ${sum}`;
