@@ -20,31 +20,9 @@ playButton.addEventListener('click', function () {
         document.querySelector('.winner').innerHTML = ` `;
     } else {
 
-        /**
-         * Questa funzione genera un numero random tra 1 e 5
-         *
-         * @returns {number} restituisce un numero
-         */
-        function generateRandomIntegerForPc() {
-            return Math.floor((Math.random() * 5) + 1);
-        }
-
         pcNumber = generateRandomIntegerForPc();
 
         sum = pcNumber + parseInt(userNumber.value);
-
-        /**
-         * Questa funzione controlla se un numero è pari o dispari
-         *
-         * @param {number} number - numero
-         * @returns {boolean} restituisce true o false
-         */
-        function isEven(number) {
-            if (number % 2 == 0) {
-                return true;
-            }
-            return false;
-        }
 
         //controllo il vincitore
         if (isEven(sum) && evenOrOdd.value == 'pari') {
@@ -62,3 +40,26 @@ playButton.addEventListener('click', function () {
     }
 
 });
+
+/**
+        * Questa funzione genera un numero random tra 1 e 5
+        *
+        * @returns {number} restituisce un numero
+        */
+function generateRandomIntegerForPc() {
+    return Math.floor((Math.random() * 5) + 1);
+}
+
+
+/**
+ * Questa funzione controlla se un numero è pari o dispari
+ *
+ * @param {number} number - numero
+ * @returns {boolean} restituisce true o false
+ */
+function isEven(number) {
+    if (number % 2 == 0) {
+        return true;
+    }
+    return false;
+}
